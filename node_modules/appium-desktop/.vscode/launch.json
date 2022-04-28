@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+      {
+        "name": "Debug",
+        "type": "node",
+        "request": "launch",
+        "cwd": "${workspaceRoot}",
+        "preLaunchTask": "npm: build",
+        "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron",
+        "windows": {
+          "runtimeExecutable": "${workspaceRoot}/node_modules/.bin/electron.cmd"
+        },
+        "env": {
+          "RUNNING_LOCALLY": "true",
+          "FORCE_NO_WRONG_FOLDER": "true"
+        },
+        "args": ["."]
+      },
+      {
+        "name": "Mocha current file",
+        "type": "node",
+        "request": "launch",
+        "program": "${workspaceFolder}/node_modules/mocha/bin/_mocha",
+        "args": [
+          "--timeout", "999999",
+          "--colors",
+          "${file}",
+          "--require", "@babel/register",
+        ],
+        "console": "integratedTerminal",
+        "internalConsoleOptions": "neverOpen"
+      }
+    ]
+  }

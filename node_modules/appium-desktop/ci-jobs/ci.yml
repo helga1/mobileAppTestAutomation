@@ -1,0 +1,15 @@
+# CI Build. Runs on every commit to any branch.
+jobs:
+  - job: BuildAndTest
+    variables:
+      PYTHON_ENV: 'python'
+    steps:
+    - task: NodeTool@0
+      inputs:
+        versionSpec: '11.x'
+    - script: npm install
+      displayName: 'Install dependencies'
+    - script: npm run build
+      displayName: Build project
+    - script: npm test
+      displayName: NPM test

@@ -55,8 +55,8 @@ exports.config = {
             "appium:platformVersion": '14.4',
             "appium:deviceName":"iPhone 8",
             "appium:automationName": "XCUITest",
-            "appium:app": path.join(process.cwd(), "./app/ios/nativeTest.app"),
-           // "appium:app": path.join(process.cwd(), "./ios/expo-poc-integration"),
+            //"appium:app": path.join(process.cwd(), "./app/ios/nativeTest.app"),
+            "appium:app": path.join(process.cwd(), "./app/ios/weather.app"),
         }],
    // "autoAcceptAlerts": true,
 

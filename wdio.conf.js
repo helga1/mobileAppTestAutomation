@@ -5,7 +5,7 @@ exports.config = {
     // Runner Configuration
     // ====================
     //
-    port:4723,
+    port:8888,
     //
     // ==================
     // Specify Test Files
@@ -53,10 +53,10 @@ exports.config = {
     capabilities: [{
             platformName:'ios',
             "appium:platformVersion": '14.4',
-            "appium:deviceName":"iPhone 8",
+            "appium:deviceName":"iPhone 12",
             "appium:automationName": "XCUITest",
-            //"appium:app": path.join(process.cwd(), "./app/ios/nativeTest.app"),
-            "appium:app": path.join(process.cwd(), "./app/ios/weather.app"),
+
+        "appium:app": path.join(process.cwd(), "./app/ios/clmobile.app"),
         }],
    // "autoAcceptAlerts": true,
 

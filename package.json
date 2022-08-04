@@ -24,5 +24,12 @@
     "@wdio/spec-reporter": "^7.14.1",
     "eslint-plugin-wdio": "^7.19.4",
     "eslint": "^8.14.0"
-  }
+  },
+  "bundledDependencies": [
+    "@wdio/cli",
+    "appium",
+    "appium-desktop",
+    "appium-xcuitest-driver",
+    "eslint"
+  ]
 }

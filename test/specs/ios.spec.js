@@ -1,8 +1,9 @@
 const openSweepstakeScreen = require('../screenObjects/ios/openSweepScreen')
 const sweepScreen = require('../screenObjects/ios/sweepList')
+const header = require('../screenObjects/ios/header')
 
-describe ('IOS test', () => {
-    it('Verify that sweepstake has at least 1 donation card', async () => {
+describe ('open sweepstake has a donation variant', () => {
+    it('Verify that sweepstake has at least 1 donation variant', async () => {
         await sweepScreen.openSweep.click()
         await driver.setImplicitTimeout(5000)
         const b = await openSweepstakeScreen.firstDonationVariant.length
@@ -30,6 +31,13 @@ describe ('Verify sweepstake sections', () =>{
         expect(await  openSweepstakeScreen.sweepstakeDonationVariants).toBe(1)
 
     })
+
 })
+describe ( 'Verify header', ()=>{
+    it('Verify sweepstake page has a header', async ()=>{
+        expect(await header.header).toBe(1)
+    })
+    }
+)
 
 

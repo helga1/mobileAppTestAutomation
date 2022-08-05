@@ -14,6 +14,10 @@ class OpenSweepScreen{
      return $$('~sweepstake_details').length
  }
 
+ get sweepstakeDetailsBodyCopyEphasis(){
+
+ }
+
 
  get sweepstakePrizeDetails(){
      return $$('~prize_details').length
@@ -27,7 +31,7 @@ class OpenSweepScreen{
      return $$('~donation_variants').length
  }
 
- get
+
 
 
 }

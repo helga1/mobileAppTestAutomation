@@ -56,7 +56,7 @@ exports.config = {
             "appium:deviceName":"iPhone 12",
             "appium:automationName": "XCUITest",
 
-        "appium:app": path.join(process.cwd(), "./app/ios/clmobile.app"),
+        "appium:app": path.join(process.cwd(), "./app/ios/appMob.app"),
         }],
    // "autoAcceptAlerts": true,
 

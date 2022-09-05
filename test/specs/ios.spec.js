@@ -1,6 +1,7 @@
 const openSweepstakeScreen = require('../screenObjects/ios/openSweepScreen')
 const sweepScreen = require('../screenObjects/ios/sweepList')
 const header = require('../screenObjects/ios/header')
+const authorizationScreen= require('../screenObjects/ios/authorizationScreen')
 
 describe ('open sweepstake has a donation variant', () => {
     it('Verify that sweepstake has at least 1 donation variant', async () => {
@@ -39,5 +40,13 @@ describe ( 'Verify header', ()=>{
     })
     }
 )
+
+describe.only ('login', ()=>{
+    it('login', async ()=>{
+        await authorizationScreen.clickLogin()
+       // await authorizationScreen.clickContinue()
+
+    })
+})
 
 

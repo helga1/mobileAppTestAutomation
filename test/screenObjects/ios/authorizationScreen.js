@@ -1,31 +1,26 @@
-const { By} = require('selenium-webdriver')
+//const { By} = require('selenium-webdriver')
+//const value = require('/Users/olga/mobileAppTestAutomation/helpers/parameters.js')
+
+
 class AuthorizationScreen {
     async clickLogin() {
        await $('~login_button').click()
+        console.log('1')
         await $('~Continue').click()
-        const contexts = await driver.getContexts();
-        await browser.pause(3000)
-       await driver.switchContext(contexts[1]);
-        await $('[name="username"]').addValue('olga@omaze.com')
-        console.log('finish')
+     await driver.pause(20000)
+        let contexts = await driver.getContexts()
+       console.log(contexts)
+        await  driver.switchContext(contexts[1])
+       await $('[name="username"]').addValue('olga@omaze.com')
         await $('[name="password"]').addValue('Password1984!')
-        console.log('finish')
         await $('[name="action"]').click()
-        console.log('finish')
-        //const contexts1 = await driver.getContexts();
-       await browser.pause(3000)
-        await driver.switchContext(contexts[0]) // leave webview context
-
-        //console.log(contexts1)
+        await driver.switchContext(contexts[0])
         await $('~home_bee').click()
+        await driver.pause(3000)
+        await $('~home_logout').click()
 
 
-       // await element.click()
 
-
-           // await element.addValue('olga@omaze.com')
-      //  await $("//*[@name= 'Password']").type('Password1984!')
-      //  await $("//*[@name= 'Continue']").click()
 
     }
 }

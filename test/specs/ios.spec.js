@@ -2,6 +2,7 @@ const openSweepstakeScreen = require('../screenObjects/ios/openSweepScreen')
 const sweepScreen = require('../screenObjects/ios/sweepList')
 const header = require('../screenObjects/ios/header')
 const authorizationScreen= require('../screenObjects/ios/authorizationScreen')
+const winnerAnnouncedSweepstake= require('../screenObjects/ios/winnerAnnouncedSweepScreen')
 
 describe ('open sweepstake has a donation variant', () => {
     it('Verify that sweepstake has at least 1 donation variant', async () => {
@@ -47,6 +48,16 @@ describe.only ('login', ()=>{
        // await authorizationScreen.clickContinue()
 
     })
+})
+
+describe ('verify closed sweep page has correct sections', ()=>{
+    it('charity details section', async ()=>{
+        expect(await winnerAnnouncedSweepstake.getCharityDetailsTitle).toBe('Make A Wish')
+    })
+    it('who was supported', async()=>{
+        expect (await winnerAnnouncedSweepstake.whoWasSupported).toBe('this experience supported')
+        }
+    )
 })
 
 

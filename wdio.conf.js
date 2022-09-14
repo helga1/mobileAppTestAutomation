@@ -56,7 +56,7 @@ exports.config = {
             "appium:deviceName":"iPhone 11 Pro",
             "appium:automationName": "XCUITest",
 
-        "appium:app": path.join(process.cwd(), "./app/ios/appiumApp.app"),
+        "appium:app": path.join(process.cwd(), "./app/ios/app1.app"),
         }],
    // "autoAcceptAlerts": true,
 

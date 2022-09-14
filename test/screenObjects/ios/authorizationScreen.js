@@ -8,9 +8,9 @@ class AuthorizationScreen {
         console.log('1')
         await $('~Continue').click()
      await driver.pause(20000)
-        let contexts = await driver.getContexts()
-       console.log(contexts)
-        await  driver.switchContext(contexts[1])
+        const contexts = await driver.getContexts();
+       console.log(contexts + ' BFNFGFGNJFGJFGFGJ')
+       await  driver.switchContext(contexts[1])
        await $('[name="username"]').addValue('olga@omaze.com')
         await $('[name="password"]').addValue('Password1984!')
         await $('[name="action"]').click()

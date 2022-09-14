@@ -3,7 +3,6 @@ const sweepScreen = require('../screenObjects/ios/sweepList')
 const header = require('../screenObjects/ios/header')
 const authorizationScreen= require('../screenObjects/ios/authorizationScreen')
 const winnerAnnouncedSweepstake= require('../screenObjects/ios/winnerAnnouncedSweepScreen')
-const openSweep= require('../screenObjects/ios/openSweepstakeScreen')
 
 describe ('open sweepstake has a donation variant', () => {
     it('Verify that sweepstake has at least 1 donation variant', async () => {
@@ -16,6 +15,8 @@ describe ('open sweepstake has a donation variant', () => {
 
 describe ('Verify sweepstake sections', () =>{
     it('Sweepstake hero image', async ()=> {
+        await authorizationScreen.clickLogin()
+        await driver.pause(3000)
         expect (await openSweepstakeScreen.sweepstakeHeroImage).toBe(1)
     })
     it('Sweepstake Status', async ()=>{
@@ -43,9 +44,11 @@ describe ( 'Verify header', ()=>{
     }
 )
 
-describe.only ('login', ()=>{
+describe ('login', ()=>{
     it('login', async ()=>{
         await authorizationScreen.clickLogin()
+        await driver.pause(3000)
+        expect(await openSweep.donationCardAmount).toBe(5)
        // await authorizationScreen.clickContinue()
 
     })
@@ -61,16 +64,22 @@ describe ('verify closed sweep page has correct sections', ()=>{
     )
 })
 
-describe ('verify open sweep page has correct', ()=>{
-    it('open sweep shoud have details support section', async ()=>{
-        expect(await  openSweep.detailsSupportElement).toBe(true)
-    }),
+describe.only ('verify open sweep page has correct content', ()=>{
+    it('open sweep should have details support section', async ()=>{
+        await authorizationScreen.clickLogin()
+        await driver.pause(3000)
+        expect(await openSweepstakeScreen.detailsSupportElement).toBe(1)
+    })
+    it('amount of donation variants is 5', async ()=>{
+        expect(await openSweepstakeScreen.donationCardAmount).toBe(5)
+    })
     /*it('open sweep should details Body Text', async ()=>{
         expect(await  openSweep()).toBe(true)
     }),
 
      */
-        it('open sweep shoud have details Title', async ()=>{
+
+        /*it('open sweep shoud have details Title', async ()=>{
             expect(await  openSweep.detailsTitle()).toBe(true)
         }),
         it('open sweep shoud have closes Text', async ()=>{
@@ -122,6 +131,8 @@ describe ('verify open sweep page has correct', ()=>{
     it('amount of donation variants is 5', async ()=>{
         expect(await openSweep.donationCardAmount).toBe(5)
     })
+
+         */
 
 
 

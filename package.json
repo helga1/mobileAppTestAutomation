@@ -11,7 +11,7 @@
   "description": "",
   "dependencies": {
     "@wdio/cli": "^7.19.6",
-    "appium": "^2.0.0-beta.33",
+    "appium": "^1.22.3",
     "appium-desktop": "^1.14.1",
     "appium-xcuitest-driver": "^3.62.0",
     "eslint": "^8.14.0",

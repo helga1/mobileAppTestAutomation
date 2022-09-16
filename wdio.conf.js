@@ -53,10 +53,10 @@ exports.config = {
     capabilities: [{
             platformName:'ios',
             "appium:platformVersion": '14.4',
-            "appium:deviceName":"iPhone 11 Pro",
+            "appium:deviceName":"iPhone 12 Pro Max",
             "appium:automationName": "XCUITest",
 
-        "appium:app": path.join(process.cwd(), "./app/ios/app1.app"),
+        "appium:app": path.join(process.cwd(), "./app/ios/clmobilecopy.app"),
         }],
    // "autoAcceptAlerts": true,
 

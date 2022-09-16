@@ -3,7 +3,8 @@ const sweepScreen = require('../screenObjects/ios/sweepList')
 const header = require('../screenObjects/ios/header')
 const authorizationScreen= require('../screenObjects/ios/authorizationScreen')
 const winnerAnnouncedSweepstake= require('../screenObjects/ios/winnerAnnouncedSweepScreen')
-
+const winnerPendingSweepstake = require('../screenObjects/ios/winnerPendingScreen')
+const awaitExpect = require("eslint-plugin-wdio/src/rules/await-expect");
 describe ('open sweepstake has a donation variant', () => {
     it('Verify that sweepstake has at least 1 donation variant', async () => {
         await sweepScreen.openSweep.click()
@@ -79,64 +80,86 @@ describe.only ('verify open sweep page has correct content', ()=>{
 
      */
 
-        /*it('open sweep shoud have details Title', async ()=>{
-            expect(await  openSweep.detailsTitle()).toBe(true)
-        }),
+        it('open sweep shoud have details Title', async ()=>{
+            //await authorizationScreen.clickLogin()
+           // await driver.pause(3000)
+            expect(await  openSweepstakeScreen.detailsTitle()).toBe(1)
+        })
         it('open sweep shoud have closes Text', async ()=>{
-            expect(await  openSweep.closesText).toBe(true)
+            expect(await  openSweepstakeScreen.closesText).toBe(1)
         })
     it('open sweep shoud have details support section', async ()=>{
-        expect(await  openSweep.detailsSupportElement)
+        expect(await  openSweepstakeScreen.detailsSupportElement).toBe(1)
     }),
         it('open sweep shoud have detailsTitle', async ()=>{
-            expect(await  openSweep.detailsTitle).toBe(true)
+            expect(await  openSweepstakeScreen.detailsTitle).toBe(1)
         }),
         it('open sweep shoud have winner Announced Title', async ()=>{
-            expect(await  openSweep.winnerAnnouncedTitle).toBe(true)
+            expect(await  openSweepstakeScreen.winnerAnnouncedTitle).toBe(1)
         }),
         it('open sweep shoud have prize Details Title', async ()=>{
-            expect(await  openSweep.prizeDetailsTitle).toBe(true)
+            expect(await  openSweepstakeScreen.prizeDetailsTitle).toBe(1)
         }),
         it('open sweep shoud have carousel CardSub title', async ()=>{
-            expect(await  openSweep.carouselCardSubtitle).toBe(true)
+            expect(await  openSweepstakeScreen.carouselCardSubtitle).toBe(1)
         }),
         it('open sweep shoud have carousel Card Body', async ()=>{
-            expect(await  openSweep.carouselCardBody).toBe(true)
+            expect(await  openSweepstakeScreen.carouselCardBody).toBe(1)
         }),
         it('open sweep shoud have who You Help', async ()=>{
-            expect(await  openSweep.whoYouHelp).toBe(true)
+            expect(await  openSweepstakeScreen.whoYouHelp).toBe(true)
         }),
         it('open sweep shoud have carousel Card Body', async ()=>{
-            expect(await  openSweep.carouselCardBody).toBe(true)
+            expect(await  openSweepstakeScreen.carouselCardBody).toBe(1)
         }),
         it('open sweep shoud have charity Details Legal', async ()=>{
-            expect(await  openSweep.charityDetailsLegal).toBe(true)
+            expect(await  openSweepstakeScreen.charityDetailsLegal).toBe(1)
         }),
         it('open sweep shoud have carousel Card Body', async ()=>{
-            await openSweep.charityDetailsLegal.click()
-            expect(await  openSweep.carouselCardBody).toBe(true)
+            await openSweepstakeScreen.charityDetailsLegal.click()
+            expect(await  openSweepstakeScreen.carouselCardBody).toBe(1)
         }),
         it('open sweep shoud have donationVariantsTitle', async ()=>{
-            expect(await  openSweep.donationVariantsTitle).toBe(true)
+            expect(await  openSweepstakeScreen.donationVariantsTitle).toBe(1)
         }),
         it('open sweep shoud have donation Variants', async ()=>{
-            expect(await  openSweep.donationVariants).toBe(true)
+            expect(await  openSweepstakeScreen.donationVariants).toBe(1)
         }),
         it('open sweep shoud have legal Header', async ()=>{
-            expect(await  openSweep.legalHeader).toBe(true)
+            expect(await  openSweepstakeScreen.legalHeader).toBe(1)
         }),
         it('open sweep shoud have legal Text', async ()=>{
-            expect(await  openSweep.legalText).toBe(true)
+            expect(await  openSweepstakeScreen.legalText).toBe(1)
         })
     it('amount of donation variants is 5', async ()=>{
-        expect(await openSweep.donationCardAmount).toBe(5)
+        expect(await openSweepstakeScreen.donationCardAmount).toBe(5)
     })
-
-         */
-
-
-
-
 })
 
+describe ('WINNER PENDING sweepstake screen validation', ()=> {
+    it('winner pendidng screen needs to have sweep title', async () => {
+        expect(await winnerPendingSweepstake.sweepstake_closed_title).toBe(1)
+    })
+    it('winner pendidng screen needs to have WinnerPending text', async () => {
+        expect(await winnerPendingSweepstake.WinnerPending).toBe(1)
+    })
 
+    it('winner pendidng screen needs to have WinnerWillBeAnnounced text', async () => {
+        expect(await winnerPendingSweepstake.WinnerWillBeAnnounced).toBe(1)
+    })
+    it('winner pendidng screen needs to have winnerPendingAnnounce Date ', async () => {
+        expect(await winnerPendingSweepstake.winnerPendingAnnounceDate).toBe(1)
+    })
+    it('winner pendidng screen needs to have winnerPendingAnnounce Date ', async () => {
+        expect(await winnerPendingSweepstake.winnerPendingAnnounceDate).toBe(1)
+    })
+    it('winner pendidng screen needs to have WinnerWillBeAnnounced text ', async () => {
+        expect(await winnerPendingSweepstake.WinnerWillBeAnnounced).toBe(1)
+    })
+    it('winner pendidng screen needs to have Experience Supported text ', async () => {
+        expect(await winnerPendingSweepstake.ExperienceSupported).toBe(1)
+    })
+    it('winner pendidng screen needs to have Experience sweepstakeClosedCharityTitle ', async () => {
+        expect(await winnerPendingSweepstake.sweepstakeClosedCharityTitle).toBe(1)
+    })
+})

@@ -38,87 +38,77 @@ class OpenSweepScreen{
        return detailsSupport
     }
 
-    /*
-    await $('~login_button').click()
-
-
-
     get detailsTitle(){
             const sweepTitle = $$('~sweepstake_details_title').length
-            const title = expect(detailsSupport).toBeDisabled()
-            return title
+            return sweepTitle
     }
-   Accessabilty id should be unique. create ticket
+
+   /*Accessabilty id should be unique. create ticket
    get detailsBodyText(){
         const detailsBodyText = $$('Win a 5-day vacation at The St. Regis...*)
         return bodyDetails
 
+    */
+
     get detailsTitle(){
         const detailsTitle = $$('~sweepstake_details_legal').length
-        const detailsTitle1 = expect(detailsTitle).toBe(1)
-        return detailsTitle1
+        return detailsTitle
     }
     get closesText(){
         const closeText = $$('~sweepstake_details_close_date_title').length
-        const closeText1 = expect(closeText).toBe(1)
-        return closeText1
+        return closeText
     }
     get winnerAnnouncedTitle(){
         const winnerAnnouncedTitle = $$('~sweepstake_details_close_date').length
-        const winnerAnnouncedTitle1 = expect(winnerAnnouncedTitle).toBeDisabled()
-        return winnerAnnouncedTitle1
+        return winnerAnnouncedTitle
     }
     get winnerAnnounceDate(){
         const winnerAnnounceDate = $$('~sweepstake_details_winner_datee').length
-        const winnerAnnounceDate1 = expect(winnerAnnounceDate).toBeDisabled()
         return winnerAnnounceDate
     }
     get prizeDetailsTitle(){
         const prizeDetailsTitle = $$('~prize_details_title').length
-        const prizeDetailsTitle1 = expect(prizeDetailsTitle).toBeDisabled()
-        return prizeDetailsTitle1
+        return prizeDetailsTitle
     }
     get carouselCardSubtitle(){
         const carouselCardSubtitle = $$('~carousel_card_0_subtitle').length
-        const carouselCardSubtitle1 = expect(carouselCardSubtitle).toBeDisabled()
-        return carouselCardSubtitle1
+        return carouselCardSubtitle
     }
     get carouselCardBody(){
         const carouselCardBody = $$('~carousel_card_0_body').length
-        const carouselCardBody1 = expect(carouselCardBody).toBeDisabled()
-        return carouselCardBody1
+        return carouselCardBody
     }
 
     get whoYouHelp(){
         const whoYouHelp = $$("~Who you'll help").length
-        const whoYouHelp1 = expect(whoYouHelp).toBeDisabled()
-        return whoYouHelp1
+        return whoYouHelp
     }
 
-   accessabiliyu id should be changed
+  /* accessabiliyu id should be changed
     get charityBody(){
         const charityBody = $$('~').length
         const charityBody1 = expect(charityBody).toBeDisabled()
         return charityBody1
     }
 
-    omaze logo
+   */
+
+   /* omaze logo
     charity logo all images need accessability id
+
+    */
 
     get charityDetailsLegal(){
         const charityDetailsLegal = $$('~charity_details_legal').length
-        const charityDetailsLegal1 = expect(charityDetailsLegal).toBeDisabled()
-        return charityDetailsLegal1
+        return charityDetailsLegal
     }
     get donationVariantsTitle(){
         const donationVariantsTitle = $$('~donation_variants_title').length
-        const donationVariantsTitle1 = expect(donationVariantsTitle).toBeDisabled()
-        return donationVariantsTitle1
+        return donationVariantsTitle
     }
     get donationVariants(){
         const donationVariants = $$('~donation_variants_cards').length
-        const donationVariants1 = expect(donationVariants).toBeDisabled()
-        return donationVariants1
+        return donationVariants
     }
 
     get legalHeader(){
@@ -126,13 +116,14 @@ class OpenSweepScreen{
         return legalHeader
     }
 
-needs accessability id
+/*needs accessability id
     get legalText(){
         const legalText = $$().length
         const legalText1 = expect(legalText).toBeDisabled()
-        return legalText1}
+        return legalText1
+        }
 
-     */
+ */
 
 
     get donationCardAmount() {

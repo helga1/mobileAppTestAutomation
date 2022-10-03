@@ -56,7 +56,7 @@ exports.config = {
             "appium:deviceName":"iPhone 12 Pro Max",
             "appium:automationName": "XCUITest",
 
-        "appium:app": path.join(process.cwd(), "./app/ios/clmobilecopy.app"),
+        "appium:app": path.join(process.cwd(), "./app/ios/clmobileBcopy.app"),
         }],
    // "autoAcceptAlerts": true,
 

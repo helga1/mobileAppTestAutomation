@@ -1,18 +1,44 @@
 class LoginScreen {
     async loginEmailElement(){
-        const loginEmailElement = await $('~Email Enter your email address')
-        return loginEmailElement
+       return await $('~Email Enter your email address')
+
     }
 
     async loginPasswordElement(){
-        const passwordEmailElement = await $('~Password Enter password')
-        return passwordEmailElement
+        return await $('~Password Enter password')
+
     }
 
     async loginSubmitElement(){
-        const loginSubmitElement = await $('~login_button')
-        return loginSubmitElement
+        return await $('~login_button')
     }
+
+    async signUpButton(){
+        return await $([name= 'Sign up'])
+        //need accs. id
+    }
+    async loginWord(){
+        return await $('~login-heading')
+    }
+
+    async forgotPassword(){
+        return await $('~Forgot Password?')
+    }
+
+    async googleAuthorization(){
+        return await $('~ icon-button-google')
+    }
+    async facebookAuthorization(){
+        return await $("~icon-button-facebook")
+    }
+    async appleAuthorization(){
+        return await $('~icon-button-apple')
+    }
+    async continueGuest(){
+        return await $('[name="Continue as Guest"]')
+        //need accs. id
+    }
+
 
 
 //login screen methods
